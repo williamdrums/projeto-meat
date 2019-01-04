@@ -14,7 +14,7 @@ export class RestaurantDetailComponent implements OnInit {
 
   ngOnInit() {
     //snapshot "como fosse  uma foto que no momento do acesso vai mostrar como estao o estado dos meus parametro"
-    //paramns objeto que contem os valores do meus parametros
+    //params objeto que contem os valores dos meus parametros
     this.restaurantsService.restaurantById(this.route.snapshot.params['id'])
     .subscribe(restaurant => this.restaurant = restaurant)
   }
