@@ -3,7 +3,8 @@
   
 <!-- pipe asinc se inscreve no menu que é um observable, pega os itens e passa pra ngFor e vai fazer a iteração -->
   <mt-menu-item *ngFor="let item of menu | async"
-  [menuItem]="item" (add)="addMenuItem($event)"></mt-menu-item> <!-- menuItem esta recebendo o valor da linha atual que esta sendo iterado pelo for -->
+  [menuItem]="item" (add)="addMenuItem($event)"></mt-menu-item> <!-- menuItem esta recebendo o valor da 
+                                                                linha atual que esta sendo iterado pelo for -->
   
 
 </div>
