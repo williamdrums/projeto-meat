@@ -12,10 +12,22 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
   }
 
-  items(){
+  items() {
     return this.shoppingCartService.items; //passando o array do carrinho de compra
   }
-  total(): number{
- return this.shoppingCartService.total();// retorna o total do carrinho de compra 
+
+  clear() {
+    this.shoppingCartService.clear();
+  }
+
+  removeItem(item: any) {
+    this.shoppingCartService.removeItem(item);
+  }
+
+  addItem(item: any) {
+    this.shoppingCartService.addItem(item);
+  }
+  total(): number {
+    return this.shoppingCartService.total();// retorna o total do carrinho de compra 
   }
 }

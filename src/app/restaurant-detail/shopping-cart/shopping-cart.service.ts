@@ -20,12 +20,12 @@ export class ShoppingCartService {
     }
 
     removeItem(item: CartItem) {
-       this.items.splice(this.items.indexOf(item),1)
+       this.items.splice(this.items.indexOf(item),1) //remove item da lista(item,1) 1 especifica a quantida de elementos a ser removido
     }
 
     total(): number {
         return this.items
         .map(item => item.value())
-        .reduce((prev,value) => prev+value,0);
+        .reduce((prev,value) => prev+value,0); //prev valor acumulado a cada iteração no array(concatena o valor anterior com o atual)
     }
 }
